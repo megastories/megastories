@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+}
+
+header {
+    height: auto; /* Adjust height to be more compact */
+    background: linear-gradient(to right, rgba(30, 144, 255, 0.7), rgba(30, 144, 255, 0.5)), url('./images/header-background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80px; /* Smaller logo */
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+.navigation {
+    flex: 2;
+    text-align: center;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navigation ul li {
+    position: relative;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #f5fafd, #e1ecf3);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Passion One', sans-serif;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    font-family: 'Alef', sans-serif;
+}
+
+.hero .btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: 'Overlock', serif;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #357ABD;
+}
+
+.popular-products {
+    padding: 60px 20px;
+}
+
+.popular-products h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #333;
+    font-family: 'Alef', sans-serif;
+}
+
+.popular-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product {
+    background-color: #e0e6ea;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Alef', sans-serif;
+}
+
+.product p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+    font-family: 'Alef', sans-serif;
+}
+
+.product .btn {
+    background-color: #61c5ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Overlock', serif;
+}
+
+.product .btn:hover {
+    background-color: #52a6d6;
+}
+
+
+.products {
+    padding: 60px 20px;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #333;
+    font-family: 'Alef', sans-serif;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-info h2 {
+    margin-bottom: 10px;
+    font-family: 'Overlock', serif;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-family: 'Overlock', serif;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+    font-family: 'Overlock', serif;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #0072ff;
+    transition: color 0.3s ease;
+    font-family: 'Overlock', serif;
+}
+
+.footer-links ul li a:hover {
+    color: #0056b3;
+}
+
+.footer-social-media {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social-media h3 {
+    margin-bottom: 15px;
+    font-family: 'Overlock', serif;
+}
+
+.footer-social-media a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-media a:hover {
+    color: #0072ff;
+}
+
+.container {
+    display: flex; /* Ensures flex layout */
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+.product-to-purchase {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ddd;
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    padding: 50px; /* Added padding for better spacing */
+}
+
+.product-to-purchase img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.product-to-purchase .product-infos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.product-to-purchase .product-infos h2 {
+    font-family: 'Overlock', serif;
+    font-size: 2rem;
+    margin: 0; /* Removed default margin for better alignment */
+}
+
+.product-to-purchase .product-infos p {
+    font-family: 'Overlock', serif;
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+.form-container {
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    flex-wrap: wrap; /* This will help for mobile responsiveness */
+}
+
+.form-container-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-container-grid img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.form-container-grid form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.form-container-grid form input,
+.form-container-grid form textarea {
+    padding: 15px;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+    font-family: 'Overlock', serif;
+    font-size: 1rem;
+}
+
+.form-container-grid form input:hover,
+.form-container-grid form textarea:hover {
+    border-color: #4A90E2;
+}
+
+.form-container-grid form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.form-container-grid form button {
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Overlock', serif;
+    font-size: 1rem;
+}
+
+.form-container-grid form button:hover {
+    background-color: #357ABD;
+}
+
+
+
+/* Styles for the thank you card */
+.thank-you-card-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Ensures it overlays the form */
+}
+
+
+.thank-you-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+}
+
+.thank-you-card i {
+    font-size: 3rem;
+    color: #4A90E2;
+    margin-bottom: 15px;
+}
+
+.thank-you-card p {
+    font-size: 1.2rem;
+    font-family: 'Overlock', serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Backdrop to blur the background when the card appears */
+.thank-you-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        margin-top: 13px;
+    }
+
+    .product-to-purchase {
+        flex-direction: column; /* Stack image and text vertically */
+        width: 95%; /* Reduce width for smaller screens */
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+
+    .product-to-purchase img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space below image */
+    }
+
+    .product-to-purchase .product-infos {
+        margin-left: 0; /* Remove left margin on small screens */
+        text-align: center; /* Center align text */
+    }
+
+    .product-to-purchase .product-infos h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .product-to-purchase .product-infos p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .form-container-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-container-grid img {
+        margin-bottom: 20px;
+    }
+    
+    .form-container-grid form {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .form-container-grid form input, 
+    .form-container-grid form textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-container-grid form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .form-container-grid form input, 
+    .form-container-grid form textarea {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .form-container-grid form button {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+}
